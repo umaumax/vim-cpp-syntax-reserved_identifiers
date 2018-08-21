@@ -7,5 +7,8 @@ else
 endif
 syntax match cReservedIdentifiers /\w*__\w*/ containedin=cPreCondit
 
+syntax match ReservedIdentifiers /__asm__/ containedin=cReservedIdentifiers
+syntax match ReservedIdentifiers /__restrict/ containedin=cReservedIdentifiers
+
 highlight default link cReservedIdentifiers ReservedIdentifiers
 highlight default link ReservedIdentifiers WarningMsg
